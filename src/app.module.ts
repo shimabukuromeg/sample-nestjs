@@ -4,6 +4,7 @@ import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { PostsModule } from './components/posts/posts.module';
+import { UsersModule } from './components/users/users.module';
 import * as path from 'path';
 
 @Module({
@@ -18,6 +19,7 @@ import * as path from 'path';
       sortSchema: true,
     }),
     PostsModule,
+    UsersModule,
   ],
 })
 export class AppModule { }

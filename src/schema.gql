@@ -9,4 +9,10 @@ type PostModel {
 
 type Query {
   posts: [PostModel!]
+  users: [UserModel!]
+}
+
+type UserModel {
+  id: String!
+  name: String!
 }
