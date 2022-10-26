@@ -1,0 +1,16 @@
+version: "3"
+
+volumes:
+  db-data:
+
+services:
+  db:
+    image: postgres:14
+    container_name: sample-nestjs
+    volumes:
+      - db-data:/var/lib/postgresql/sample-nestjs/data
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
