@@ -3,8 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { GraphQLModule } from '@nestjs/graphql';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
-import { PostsModule } from './components/posts/posts.module';
-import { UsersModule } from './components/users/users.module';
+import { PostsModule } from './modules/posts/posts.module';
+import { UsersModule } from './modules/users/users.module';
 import * as path from 'path';
 
 @Module({
