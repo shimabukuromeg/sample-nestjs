@@ -6,8 +6,15 @@ input CreatePostInput {
   title: String!
 }
 
+input LoginUserInput {
+  email: String!
+  password: String!
+}
+
 type Mutation {
   createPost(input: CreatePostInput!): PostModel!
+  login(input: LoginUserInput!): UserModel
+  register(input: RegisterUserInput!): UserModel
 }
 
 type PostModel {
@@ -16,8 +23,15 @@ type PostModel {
 }
 
 type Query {
+  allUsers: [UserModel!]
   posts: [PostModel!]
   users: [UserModel!]
+}
+
+input RegisterUserInput {
+  confirmationPassword: String!
+  email: String!
+  password: String!
 }
 
 type UserModel {
