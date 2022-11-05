@@ -8,9 +8,7 @@ import { PrismaService } from '../../prisma.service'
 
 @Injectable()
 export class AuthService {
-    constructor(private readonly prismaService: PrismaService) {
-        // console.log("hello");
-    }
+    constructor(private readonly prismaService: PrismaService) { }
 
     async validateUser(user: LoginUserInput) {
         const foundUser = await this.prismaService.user.findUnique({

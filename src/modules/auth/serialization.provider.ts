@@ -9,7 +9,6 @@ export class AuthSerializer extends PassportSerializer {
     constructor(private readonly authService: AuthService) {
         super();
     }
-    // ログインした後にこいつが呼ばれずユーザー情報が付与されていないのが問題っぽい？
     serializeUser(user: User, done: (err: Error, user: { id: string; isAdmin: boolean }) => void) {
         console.log("== call serializeUser ==");
 

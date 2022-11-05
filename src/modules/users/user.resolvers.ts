@@ -7,9 +7,7 @@ import { UseGuards } from '@nestjs/common';
 
 @Resolver(() => UserModel)
 export class UsersResolver {
-    constructor(private readonly prismaService: PrismaService) {
-        // console.log("hello");
-    }
+    constructor(private readonly prismaService: PrismaService) { }
 
     // NOTE:ログイン済みのユーザーのみが実行できる
     @UseGuards(LoggedInGuard)
